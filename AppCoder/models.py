@@ -12,3 +12,16 @@ class Curso(models.Model):
 class estudiante(models.Model):
     nombre = models.CharField(max_length=40)
     apellido = models.CharField(max_length=40)
+    email = models.EmailField(null= True)
+
+
+class Profesor(models.Model):
+    nombre = models.CharField(max_length=40)
+    apellido = models.CharField(max_length=40)
+    email = models.EmailField(null= True)
+    profesion = models.CharField(max_length= 40)
+
+class Entregable(models.Model):
+    nombre = models.CharField(max_length=40)
+    fechaDeEntrega = models.DateField()
+    entregado = models.BooleanField()
